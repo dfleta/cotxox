@@ -1,4 +1,4 @@
-package org.foobarspam.cotxox.test;
+package org.foobarspam.cotxox;
 
 import java.util.ArrayList;
 import java.util.List;

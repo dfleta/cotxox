@@ -1,4 +1,4 @@
-package org.foobarspam.cotxox.test;
+package org.foobarspam.cotxox;
 
 import static org.junit.Assert.*;
 
