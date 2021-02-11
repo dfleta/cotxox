@@ -1,6 +1,7 @@
 package org.foobarspam.cotxox;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.foobarspam.cotxox.carrera.Carrera;
 import org.foobarspam.cotxox.conductores.Conductor;
@@ -12,8 +13,7 @@ public class Cotxox {
 
 		/* 
 		 * Configuracion del usuario
-		 * y de la Carrera.
-		 * 
+		 * y de la Carrera. 
 		 */
 
 		String tarjetaCredito = "4916119711304546";
@@ -45,12 +45,13 @@ public class Cotxox {
 
 		System.out.println("\n#####" + "\t Get a ride: Driver: \t" + "#####\n");
 
-		/* Necesitamos crear la flota de conductores de donde seleccionar uno
+		/**
+		 * Necesitamos crear la flota de conductores de donde seleccionar uno
 		 * para ofrecer el servicio.
 		 * La flota es un objeto de tipo PoolConductores.
 		 */
 
-		ArrayList<Conductor> poolConductores = new ArrayList<>();
+		List<Conductor> poolConductores = new ArrayList<Conductor>();
 		Conductor conductor = null;
 
 		// creamos objetos conductor y los metemos en el array
@@ -65,7 +66,6 @@ public class Cotxox {
 		String[] modelos = { "Chevy Malibu", "Toyota Prius", "Mercedes A" };
 
 		int index = 0;
-		// conductora.getClass().getFields();
 		for (Conductor conductora : poolConductores) {
 			conductora.setMatricula(matricula[index]);
 			conductora.setModelo(modelos[index]);

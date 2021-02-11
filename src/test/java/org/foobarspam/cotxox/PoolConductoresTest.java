@@ -1,6 +1,7 @@
 package org.foobarspam.cotxox.test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.foobarspam.cotxox.conductores.Conductor;
 import org.foobarspam.cotxox.conductores.PoolConductores;
@@ -12,7 +13,7 @@ public class PoolConductoresTest {
 	public void ConstructorTest() {
 		// Construccion del pool de conductores
 
-		ArrayList<Conductor> poolConductores = new ArrayList<>();
+		List<Conductor> poolConductores = new ArrayList<Conductor>();
 		Conductor conductor = null;
 
 		String[] nombres = { "Samantha", "Fox" };
