@@ -1,17 +1,18 @@
 package org.foobarspam.cotxox.conductores;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class PoolConductores {
 
-	private ArrayList<Conductor> poolConductores = new ArrayList<>();
+	private List<Conductor> poolConductores = new ArrayList<Conductor>();
 
-	public PoolConductores(ArrayList<Conductor> poolConductores) {
+	public PoolConductores(List<Conductor> poolConductores) {
 		this.poolConductores = poolConductores;
 	}
 
-	public ArrayList<Conductor> getPoolConductores() {
+	public List<Conductor> getPoolConductores() {
 		return this.poolConductores;
 	}
 

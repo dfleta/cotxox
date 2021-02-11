@@ -1,0 +1,43 @@
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+application {
+    mainClassName = 'org.foobarspam.cotxox.Cotxox'
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class' : 'org.foobarspam.cotxox.Cotxox',
+                   'Package-Title' : 'Cotxox',
+                   'Package-Version': '1.0',
+                   'Package-Vendor' : 'davidg@cifpfbmol.eu',
+                   'Specification-Title' : 'Examen Cotxox'
+    }
+}

@@ -4,22 +4,22 @@ import org.foobarspam.cotxox.carrera.Carrera;
 
 public class Tarifa {
 
-	final static double costeMilla = 1.35;
-	final static double costeMinuto = 0.35;
-	final static double costeMinimo = 5.0;
-	final static byte porcentajeComision = 20;
+	final static double COSTE_MILLA = 1.35;
+	final static double COSTE_MINUTO = 0.35;
+	final static double COSTE_MINIMO = 5.0;
+	final static byte PORCENTAJE_COMISION = 20;
 
 	public static double getCosteDistancia(double distancia) {
-		return distancia * costeMilla;
+		return distancia * COSTE_MILLA;
 	}
 
 	public static double getCosteTiempo(int minutos) {
-		return minutos * costeMinuto;
+		return minutos * COSTE_MINUTO;
 	}
 
 	public static double getCosteTotalEsperado(Carrera carrera) {
 		double costeTotal = getCosteDistancia(carrera.getDistancia()) + getCosteTiempo(carrera.getTiempoEsperado());
-		return costeTotal > costeMinimo ? costeTotal : costeMinimo;
+		return costeTotal > COSTE_MINIMO ? costeTotal : COSTE_MINIMO;
 	}
 
 }
